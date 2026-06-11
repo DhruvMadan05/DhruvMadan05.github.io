@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.30.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="wrap">
+    <p class="eyebrow">About</p>
+    <h1>A little about me</h1>
+
+    <div class="about-grid section" style="margin-top: 32px;">
+      <!-- To use a real photo: put it in images/ and swap the div below for
+           <img class="about-photo" src="images/me.jpg" alt="Photo of me"> -->
+      <div class="about-photo-placeholder" data-initials aria-hidden="true"></div>
+
+      <div class="about-text">
+        <p>Replace this with your story. Two or three short paragraphs work well: where you're from, what drew you to your field, and what kind of problems you love working on.</p>
+        <p>A second paragraph can cover what you're doing now — your role, your team, or what you're studying — and what you're hoping to do next.</p>
+        <p>End with something human: what you do outside work, a hobby, or what someone should reach out to you about. You can reach me at <a data-resume-email href="mailto:you@example.com">my email</a> or through the links in the footer.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var a = document.querySelector("[data-resume-email]");
+      if (a) a.setAttribute("href", "mailto:" + SITE.email);
+    });
+  </script>
+</body>
+</html>

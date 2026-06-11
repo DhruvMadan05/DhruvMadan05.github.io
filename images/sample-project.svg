@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#E1F5EE"/>
+  <rect x="60" y="80" width="520" height="40" rx="8" fill="#9FE1CB"/>
+  <rect x="60" y="150" width="240" height="170" rx="8" fill="#5DCAA5"/>
+  <rect x="330" y="150" width="250" height="80" rx="8" fill="#9FE1CB"/>
+  <rect x="330" y="240" width="250" height="80" rx="8" fill="#9FE1CB"/>
+  <text x="320" y="370" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#0F6E56">Replace with your project photos (images/ folder)</text>
+</svg>

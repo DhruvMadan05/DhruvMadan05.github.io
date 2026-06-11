@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home — Portfolio</title>
+  <title>Projects — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600&display=swap" rel="stylesheet">
@@ -14,31 +14,11 @@
   <header id="site-header" class="site-header"></header>
 
   <main class="wrap">
-    <section>
-      <p class="eyebrow" data-site-role></p>
-      <h1 data-site-tagline></h1>
-      <p class="lede" data-site-intro></p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="projects.html">View projects</a>
-        <a class="btn btn-ghost" data-resume-link href="resume.pdf" download>Download resume</a>
-      </div>
-    </section>
+    <p class="eyebrow">Projects</p>
+    <h1>Things I've built</h1>
+    <p class="lede" style="margin-bottom: 32px;">Click any card to see the full story, highlights, photos, and links.</p>
 
-    <section class="section">
-      <div class="section-head">
-        <h2>Featured projects</h2>
-        <a href="projects.html">See all →</a>
-      </div>
-      <div id="featured-grid" class="card-grid"></div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2>Recent experience</h2>
-        <a href="timeline.html">Full timeline →</a>
-      </div>
-      <div id="timeline-preview" class="timeline"></div>
-    </section>
+    <div id="project-grid" class="card-grid"></div>
   </main>
 
   <dialog id="project-dialog" class="project-dialog"><div class="dialog-inner"></div></dialog>
