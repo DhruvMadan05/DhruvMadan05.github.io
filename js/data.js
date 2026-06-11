@@ -19,12 +19,14 @@ const SITE = {
   role: "Robotics Engineer",                 // short label under your name
   location: "Boston, MA",
   tagline: "Hi, I'm Dhruv. I build cool things with robotics and software.",
-  intro: "I'm a Robotics engineer who wants to make the world a better place.",
+  intro: "I'm a Robotics engineer who wants to make the world a better place through thoughtful technology.",
   email: "Dmadan@wpi.edu",
-  resumeFile: "resume.pdf",                  // put your PDF in the site folder with this name
+  resumeFile: "images/Dhruv_Madan_Resume.pdf",                  // put your PDF in the site folder with this name
+  photo: "images/IMG_8003-2.jpg",                                 // optional: path to your headshot, e.g. "images/me.jpg"
+  showResumeDetails: false,                  // set true to show work/education/skills above the PDF
   links: [
-    { label: "GitHub",   url: "https://github.com/dhruvmadan05" },
-    { label: "LinkedIn", url: "https://linkedin.com/in/yourusername" },
+    { label: "GitHub",   url: "https://github.com/DhruvMadan05" },
+    { label: "LinkedIn", url: "https://linkedin.com/in/madan-dhruv/" },
   ],
 };
 
@@ -97,6 +99,8 @@ const PROJECTS = [
    org         company or school
    start       year (number) — used for sorting
    end         year (number) or "Present"
+   startMonth  optional 3-letter month abbreviation, e.g. "May"
+   endMonth    optional 3-letter month abbreviation, e.g. "Aug"
    description one or two sentences (optional, can be "")
 
    Work entries automatically appear on the Resume page too.
@@ -105,28 +109,88 @@ const PROJECTS = [
 const TIMELINE = [
   {
     type: "work",
-    title: "Senior software engineer",
-    org: "Acme Co",
-    start: 2024,
+    title: "Teaching Assistant",
+    org: "Worceter Polytechnic Institute (WPI) - RBE 2020: Embedded Systems for Robotics",
+    start: 2025,
     end: "Present",
-    description: "Lead engineer on the data platform team. Replace with a sentence about what you do.",
+    startMonth: "Jan",
+    endMonth: "Present",
+    description: "",
   },
   {
     type: "work",
-    title: "Software engineer",
-    org: "Startup Inc",
-    start: 2021,
+    title: "Robot Technician",
+    org: "Starship Technologies",
+    start: 2024,
+    end: 2026,
+    startMonth: "Feb",
+    endMonth: "Jun",
+    description: "",
+  },
+  {
+    type: "work",
+    title: "Systems Integration Intern",
+    org: "Johnson & Johnson MedTech",
+    start: 2026,
+    end: "Present",
+    description: "",
+  },
+  {
+    type: "work",
+    title: "Software Engineer",
+    org: "Brooks Automation",
+    start: 2025,
+    end: 2026,
+    startMonth: "May",
+    endMonth: "Feb",
+    description: "",
+  },
+  {
+    type: "work",
+    title: "Process Engineering Intern",
+    org: "Titleist Golf",
+    start: 2024,
     end: 2024,
-    description: "Built and shipped the company's first mobile product.",
+    startMonth: "May",
+    endMonth: "Aug",
+    description: "",
   },
   {
     type: "education",
-    title: "B.S. Computer Science",
-    org: "MIT",
-    start: 2017,
-    end: 2021,
-    description: "Focus on systems and machine learning.",
+    title: "B.S. Robotics Engineering",
+    org: "Worcester Polytechnic Institute (WPI)",
+    start: 2023,
+    end: 2027,
+    description: "Focus on robotics and automation.",
   },
+  {
+    type: "education",
+    title: "M.S. Robotics Engineering",
+    org: "Worcester Polytechnic Institute (WPI)",
+    start: 2027,
+    end: 2027,
+    description: "Focus on robotics and automation.",
+  },
+  {
+    type: "education",
+    title: "Minor in Computer Science",
+    org: "Worcester Polytechnic Institute (WPI)",
+    start: 2023,
+    end: 2027,
+    description: "Focus on robotics and automation.",
+  },
+];
+
+/* ------------------------- ABOUT ----------------------------
+   Each string becomes one paragraph on the About page.
+   Use \n\n for a blank line between sentences if you want more
+   breathing room, or just add another item to the array.
+--------------------------------------------------------------- */
+
+const ABOUT = [
+  "Replace this with your story. Two or three short paragraphs work well: where you're from, what drew you to your field, and what kind of problems you love working on.",
+  "A second paragraph can cover what you're doing now — your role, your team, or what you're studying — and what you're hoping to do next.",
+  "End with something human: what you do outside work, a hobby, or what someone should reach out to you about.",
 ];
 
 /* ------------------------- SKILLS ---------------------------

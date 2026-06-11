@@ -21,21 +21,30 @@
       </div>
       <a class="btn btn-primary" data-resume-link href="resume.pdf" download>Download PDF</a>
     </div>
-    <p class="lede">Work entries here come straight from the timeline data — add a job once and it appears in both places.</p>
+    <div id="resume-details" hidden>
+      <p class="lede">Work entries here come straight from the timeline data — add a job once and it appears in both places.</p>
+
+      <section class="resume-section">
+        <h2>Work experience</h2>
+        <div id="resume-work"></div>
+      </section>
+
+      <section class="resume-section">
+        <h2>Education</h2>
+        <div id="resume-education"></div>
+      </section>
+
+      <section class="resume-section">
+        <h2>Skills</h2>
+        <div id="resume-skills" class="skill-groups"></div>
+      </section>
+    </div>
 
     <section class="resume-section">
-      <h2>Work experience</h2>
-      <div id="resume-work"></div>
-    </section>
-
-    <section class="resume-section">
-      <h2>Education</h2>
-      <div id="resume-education"></div>
-    </section>
-
-    <section class="resume-section">
-      <h2>Skills</h2>
-      <div id="resume-skills" class="skill-groups"></div>
+      <h2>Full resume</h2>
+      <div class="resume-embed-wrap">
+        <iframe id="resume-embed" class="resume-embed" title="Resume PDF"></iframe>
+      </div>
     </section>
   </main>
 
@@ -43,5 +52,13 @@
 
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("resume-embed").src = SITE.resumeFile;
+      if (SITE.showResumeDetails) {
+        document.getElementById("resume-details").removeAttribute("hidden");
+      }
+    });
+  </script>
 </body>
 </html>
