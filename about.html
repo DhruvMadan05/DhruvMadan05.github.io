@@ -18,15 +18,10 @@
     <h1>A little about me</h1>
 
     <div class="about-grid section" style="margin-top: 32px;">
-      <!-- To use a real photo: put it in images/ and swap the div below for
-           <img class="about-photo" src="images/me.jpg" alt="Photo of me"> -->
-      <div class="about-photo-placeholder" data-initials aria-hidden="true"></div>
+      <!-- Set photo: "images/me.jpg" in data.js to use a real photo -->
+      <div class="about-photo about-photo-placeholder" data-site-photo data-initials aria-hidden="true"></div>
 
-      <div class="about-text">
-        <p>Replace this with your story. Two or three short paragraphs work well: where you're from, what drew you to your field, and what kind of problems you love working on.</p>
-        <p>A second paragraph can cover what you're doing now — your role, your team, or what you're studying — and what you're hoping to do next.</p>
-        <p>End with something human: what you do outside work, a hobby, or what someone should reach out to you about. You can reach me at <a data-resume-email href="mailto:you@example.com">my email</a> or through the links in the footer.</p>
-      </div>
+      <div id="about-text" class="about-text"></div>
     </div>
   </main>
 
@@ -34,11 +29,5 @@
 
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var a = document.querySelector("[data-resume-email]");
-      if (a) a.setAttribute("href", "mailto:" + SITE.email);
-    });
-  </script>
 </body>
 </html>

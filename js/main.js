@@ -56,6 +56,15 @@
     document.querySelectorAll("[data-resume-link]").forEach(el => { el.setAttribute("href", SITE.resumeFile); });
     const initials = SITE.name.split(/\s+/).map(w => w[0]).join("").slice(0, 2).toUpperCase();
     document.querySelectorAll("[data-initials]").forEach(el => { el.textContent = initials; });
+    if (SITE.photo) {
+      document.querySelectorAll("[data-site-photo]").forEach(el => {
+        const img = document.createElement("img");
+        img.src = SITE.photo;
+        img.alt = "Photo of " + SITE.name;
+        img.className = el.className.replace(/\b(hero|about)-photo-placeholder\b/g, "").trim();
+        el.replaceWith(img);
+      });
+    }
   }
 
   /* ---------- Project cards + expandable detail ---------- */
@@ -116,19 +125,30 @@
   }
 
   /* ---------- Timeline ---------- */
+  const MONTH_NUM = { Jan:1, Feb:2, Mar:3, Apr:4, May:5, Jun:6, Jul:7, Aug:8, Sep:9, Oct:10, Nov:11, Dec:12 };
+
+  function fmtDate(month, year) {
+    return month ? esc(month) + " " + esc(year) : esc(year);
+  }
+
   function sortedTimeline() {
     return TIMELINE.slice().sort((a, b) => {
       const endA = a.end === "Present" ? 9999 : Number(a.end);
       const endB = b.end === "Present" ? 9999 : Number(b.end);
-      return endB - endA || Number(b.start) - Number(a.start);
+      if (endB !== endA) return endB - endA;
+      const mA = a.endMonth ? (MONTH_NUM[a.endMonth] || 0) : 0;
+      const mB = b.endMonth ? (MONTH_NUM[b.endMonth] || 0) : 0;
+      if (mB !== mA) return mB - mA;
+      return Number(b.start) - Number(a.start);
     });
   }
 
   function timelineItemHTML(t) {
+    const dateRange = fmtDate(t.startMonth, t.start) + " — " + (t.end === "Present" ? "Present" : fmtDate(t.endMonth, t.end));
     return (
       '<div class="timeline-item ' + esc(t.type) + '">' +
       '<span class="timeline-dot" aria-hidden="true"></span>' +
-      '<div class="timeline-dates">' + esc(t.start) + " — " + esc(t.end) + "</div>" +
+      '<div class="timeline-dates">' + dateRange + "</div>" +
       '<div class="timeline-title">' + esc(t.title) +
       '<span class="type-badge ' + esc(t.type) + '">' + esc(t.type) + "</span></div>" +
       '<div class="timeline-org">' + esc(t.org) + "</div>" +
@@ -171,7 +191,7 @@
       work.innerHTML = sortedTimeline().filter(t => t.type === "work").map(t =>
         '<div class="resume-entry">' +
         '<div class="resume-line"><span class="resume-role">' + esc(t.title) + "</span>" +
-        '<span class="resume-dates">' + esc(t.start) + " — " + esc(t.end) + "</span></div>" +
+        '<span class="resume-dates">' + fmtDate(t.startMonth, t.start) + " — " + (t.end === "Present" ? "Present" : fmtDate(t.endMonth, t.end)) + "</span></div>" +
         '<div class="resume-org">' + esc(t.org) + "</div>" +
         (t.description ? '<div class="resume-desc">' + esc(t.description) + "</div>" : "") +
         "</div>"
@@ -182,7 +202,7 @@
       edu.innerHTML = sortedTimeline().filter(t => t.type === "education").map(t =>
         '<div class="resume-entry">' +
         '<div class="resume-line"><span class="resume-role">' + esc(t.title) + "</span>" +
-        '<span class="resume-dates">' + esc(t.start) + " — " + esc(t.end) + "</span></div>" +
+        '<span class="resume-dates">' + fmtDate(t.startMonth, t.start) + " — " + (t.end === "Present" ? "Present" : fmtDate(t.endMonth, t.end)) + "</span></div>" +
         '<div class="resume-org">' + esc(t.org) + "</div>" +
         (t.description ? '<div class="resume-desc">' + esc(t.description) + "</div>" : "") +
         "</div>"
@@ -197,6 +217,13 @@
     }
   }
 
+  /* ---------- About ---------- */
+  function renderAbout() {
+    const el = $("#about-text");
+    if (!el || typeof ABOUT === "undefined") return;
+    el.innerHTML = ABOUT.map(p => "<p>" + esc(p) + "</p>").join("");
+  }
+
   /* ---------- Boot ---------- */
   document.addEventListener("DOMContentLoaded", () => {
     renderChrome();
@@ -205,5 +232,6 @@
     renderTimeline("#timeline-full", { filterSel: "#timeline-filters" });
     renderTimeline("#timeline-preview", { limit: 3 });
     renderResume();
+    renderAbout();
   });
 })();
