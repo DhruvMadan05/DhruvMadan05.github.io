@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume — Portfolio</title>
+  <title>Timeline — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600&display=swap" rel="stylesheet">
@@ -14,29 +14,17 @@
   <header id="site-header" class="site-header"></header>
 
   <main class="wrap">
-    <div class="section-head" style="margin-bottom: 6px;">
-      <div>
-        <p class="eyebrow">Resume</p>
-        <h1>Experience &amp; education</h1>
-      </div>
-      <a class="btn btn-primary" data-resume-link href="resume.pdf" download>Download PDF</a>
+    <p class="eyebrow">Timeline</p>
+    <h1>Work &amp; education</h1>
+    <p class="lede" style="margin-bottom: 28px;">Everything in one place, newest first. Filter by type below.</p>
+
+    <div id="timeline-filters" class="filter-row" role="group" aria-label="Filter timeline">
+      <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="work" aria-pressed="false">Work</button>
+      <button class="filter-btn" data-filter="education" aria-pressed="false">Education</button>
     </div>
-    <p class="lede">Work entries here come straight from the timeline data — add a job once and it appears in both places.</p>
 
-    <section class="resume-section">
-      <h2>Work experience</h2>
-      <div id="resume-work"></div>
-    </section>
-
-    <section class="resume-section">
-      <h2>Education</h2>
-      <div id="resume-education"></div>
-    </section>
-
-    <section class="resume-section">
-      <h2>Skills</h2>
-      <div id="resume-skills" class="skill-groups"></div>
-    </section>
+    <div id="timeline-full" class="timeline"></div>
   </main>
 
   <footer id="site-footer" class="site-footer"></footer>
