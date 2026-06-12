@@ -162,7 +162,7 @@ const TIMELINE = [
 --------------------------------------------------------------- */
 
 const ABOUT = [
-  "Replace this with your story. Two or three short paragraphs work well: where you're from, what drew you to your field, and what kind of problems you love working on.",
+  "WIP",
 ];
 
 /* ------------------------- SKILLS ---------------------------
