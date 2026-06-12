@@ -24,4 +24,7 @@ const PHOTOS = [
   { src: "Photography/390A3052.jpg", alt: "Pyramids", order: 2 },
   { src: "Photography/IMG_0578.jpg", alt: "Sunset", order: 10 },
   { src: "Photography/IMG_2527.jpg", alt: "Moon", order: 10 },
+  {src: "Photography/IMG_2315_Original.jpg", alt: "Snowflake"},
+  {src: "Photography/IMG_5255.jpg", alt: "fall colors"},
+  {src: "Photography/IMG_9876.jpg", alt: "Snow"},
 ];
