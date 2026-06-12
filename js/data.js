@@ -46,50 +46,24 @@ const SITE = {
 
 const PROJECTS = [
   {
-    title: "Data dashboard",
-    subtitle: "Real-time analytics dashboard for tracking team metrics.",
+    title: "WIP",
+    subtitle: "WIP",
     year: "2025",
-    tags: ["Python", "React", "PostgreSQL"],
+    tags: ["Python"],
     accent: "teal",
     icon: "chart-bar",
     description:
-      "Replace this with the full story of your project: the problem it solves, how you built it, and what you learned. This text appears when someone clicks the card. You can write multiple sentences — it will wrap naturally.",
+      "WIP",
     highlights: [
-      "Handles 10k events per minute with live updates",
-      "Cut weekly reporting time from hours to minutes",
+      "WIP",
+      "WIP",
     ],
     links: [
       { label: "View on GitHub", url: "https://github.com/yourusername/project" },
       { label: "Live demo", url: "https://example.com" },
     ],
     images: ["sample-project.svg"],
-  },
-  {
-    title: "Mobile app",
-    subtitle: "An iOS app for tracking hiking trails offline.",
-    year: "2024",
-    tags: ["Swift", "MapKit"],
-    accent: "purple",
-    icon: "device-mobile",
-    description:
-      "Another placeholder project. Duplicate this block to add more — the cards, the expanded view, and the home-page features all update automatically.",
-    highlights: [],
-    links: [],
-    images: [],
-  },
-  {
-    title: "ML pipeline",
-    subtitle: "Training pipeline for image classification experiments.",
-    year: "2023",
-    tags: ["PyTorch", "Docker"],
-    accent: "coral",
-    icon: "robot",
-    description:
-      "A third placeholder so the grid looks full. Delete any of these once you've added your real projects.",
-    highlights: [],
-    links: [],
-    images: [],
-  },
+  }
 ];
 
 /* ------------------------- TIMELINE -------------------------
@@ -198,6 +172,6 @@ const ABOUT = [
 --------------------------------------------------------------- */
 
 const SKILLS = [
-  { group: "Languages", items: ["Python", "JavaScript", "Swift", "SQL"] },
+  { group: "Languages", items: ["Python", "JavaScript", "SQL"] },
   { group: "Tools", items: ["React", "PyTorch", "Docker", "PostgreSQL", "Git"] },
 ];
