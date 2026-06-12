@@ -19,6 +19,7 @@
     ["resume.html", "Resume"],
     ["timeline.html", "Timeline"],
     ["projects.html", "Projects"],
+    ["photography.html", "Photography"],
   ];
 
   function currentPage() {
@@ -217,6 +218,32 @@
     }
   }
 
+  /* ---------- Photography ---------- */
+  function renderPhotos(targetSel) {
+    const el = $(targetSel);
+    if (!el || typeof PHOTOS === "undefined") return;
+    const sorted = PHOTOS.slice().sort((a, b) => {
+      const oa = a.order == null ? Infinity : a.order;
+      const ob = b.order == null ? Infinity : b.order;
+      return oa - ob;
+    });
+    const COLS = 3;
+    const cols = Array.from({ length: COLS }, () => {
+      const div = document.createElement("div");
+      div.className = "photo-col";
+      return div;
+    });
+    sorted.forEach((p, i) => {
+      const img = document.createElement("img");
+      img.src = p.src;
+      img.alt = p.alt || "";
+      img.loading = "lazy";
+      cols[i % COLS].appendChild(img);
+    });
+    el.innerHTML = "";
+    cols.forEach(col => el.appendChild(col));
+  }
+
   /* ---------- About ---------- */
   function renderAbout() {
     const el = $("#about-text");
@@ -233,5 +260,6 @@
     renderTimeline("#timeline-preview", { limit: 3 });
     renderResume();
     renderAbout();
+    renderPhotos("#photo-masonry");
   });
 })();
