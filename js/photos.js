@@ -15,10 +15,10 @@
    ============================================================ */
 
 const PHOTOS = [
-  { src: "Photography/_90A3949.jpg", alt: "Denmark Flag", order: 5 },
-  { src: "Photography/_90A4145-HDR.jpg", alt: "Cherry Blossom trees", order: 1},
-  { src: "Photography/_90A4378.jpg", alt: "Highland Cow", order: 2 },
-  { src: "Photography/_MG_5531.jpg", alt: "Solar Eclipse", order: 3 },
+  { src: "Photography/90A3949.jpg", alt: "Denmark Flag", order: 5 },
+  { src: "Photography/90A4145-HDR.jpg", alt: "Cherry Blossom trees", order: 1},
+  { src: "Photography/90A4378.jpg", alt: "Highland Cow", order: 2 },
+  { src: "Photography/MG_5531.jpg", alt: "Solar Eclipse", order: 3 },
   { src: "Photography/63DBC541823EEF4145581F2763646120.jpg", alt: "Humayun’s Tomb", order: 1},
   { src: "Photography/390A0459.jpg", alt: "Lyn Lapid", order: 1 },
   { src: "Photography/390A3052.jpg", alt: "Pyramids", order: 2 },
