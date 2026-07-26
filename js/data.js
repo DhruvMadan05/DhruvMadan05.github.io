@@ -106,6 +106,7 @@ const TIMELINE = [
     title: "Systems Integration Intern",
     org: "Johnson & Johnson MedTech",
     start: 2026,
+    startMonth: "June",
     end: "Present",
     description: "",
   },
@@ -134,7 +135,9 @@ const TIMELINE = [
     title: "B.S. Robotics Engineering",
     org: "Worcester Polytechnic Institute (WPI)",
     start: 2023,
+    startMonth: "Aug",
     end: 2027,
+    endMonth: "May",
     description: "Focus on robotics and automation.",
   },
   {
@@ -150,7 +153,9 @@ const TIMELINE = [
     title: "Minor in Computer Science",
     org: "Worcester Polytechnic Institute (WPI)",
     start: 2023,
+    startMonth: "Aug",
     end: 2027,
+    endMonth: "May",
     description: "Focus on robotics and automation.",
   },
 ];
