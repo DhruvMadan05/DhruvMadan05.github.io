@@ -17,10 +17,11 @@
 const SITE = {
   name: "Dhruv Madan",                       // your name (appears in nav + footer)
   role: "Robotics Engineer",                 // short label under your name
-  location: "Boston, MA",
+  location: "Greater Boston, MA",
   tagline: "Hi, I'm Dhruv. I build cool things with robotics and software.",
   intro: "I'm a Robotics engineer who wants to make the world a better place through thoughtful technology.",
   email: "Dmadan@wpi.edu",
+  phone: "774-203-6946",                     // optional: e.g. "+1 555 123 4567" — leave blank to hide the icon
   resumeFile: "images/Dhruv_Madan_Resume.pdf",                  // put your PDF in the site folder with this name
   photo: "images/square_headshot.jpg",                                 // optional: path to your headshot, e.g. "images/me.jpg"
   showResumeDetails: false,                  // set true to show work/education/skills above the PDF
@@ -106,6 +107,7 @@ const TIMELINE = [
     title: "Systems Integration Intern",
     org: "Johnson & Johnson MedTech",
     start: 2026,
+    startMonth: "June",
     end: "Present",
     description: "",
   },
@@ -134,7 +136,9 @@ const TIMELINE = [
     title: "B.S. Robotics Engineering",
     org: "Worcester Polytechnic Institute (WPI)",
     start: 2023,
+    startMonth: "Aug",
     end: 2027,
+    endMonth: "May",
     description: "Focus on robotics and automation.",
   },
   {
@@ -143,6 +147,7 @@ const TIMELINE = [
     org: "Worcester Polytechnic Institute (WPI)",
     start: 2027,
     end: 2027,
+    endMonth: "December",
     description: "Focus on robotics and automation.",
   },
   {
@@ -150,7 +155,9 @@ const TIMELINE = [
     title: "Minor in Computer Science",
     org: "Worcester Polytechnic Institute (WPI)",
     start: 2023,
+    startMonth: "Aug",
     end: 2027,
+    endMonth: "May",
     description: "Focus on robotics and automation.",
   },
 ];
@@ -162,7 +169,11 @@ const TIMELINE = [
 --------------------------------------------------------------- */
 
 const ABOUT = [
-  "WIP",
+  "Hi, I'm Dhruv. I'm an undergraduate student at Worcester Polytechnic Institute (WPI) studying \
+  Robotics Engineering with a minor in Computer Science. I have a strong interest in robotics, automation,\
+   and software development. Currently based in the Greater Boston Area.",
+  "I have experience working in various roles in robotics or robotics adjacent sectors and am currently \
+  working as a Systems Integration Intern at Johnson & Johnson MedTech.",
 ];
 
 /* ------------------------- SKILLS ---------------------------

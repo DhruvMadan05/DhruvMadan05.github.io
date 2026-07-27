@@ -66,6 +66,20 @@
         el.replaceWith(img);
       });
     }
+    const social = document.querySelectorAll("[data-site-social]");
+    if (social.length) {
+      const linkedin = SITE.links.find(l => /linkedin/i.test(l.label));
+      const items = [];
+      if (SITE.email) items.push(['mailto:' + SITE.email, "ti-mail", "Email"]);
+      if (SITE.phone) items.push(['tel:' + SITE.phone.replace(/[^\d+]/g, ""), "ti-phone", "Phone"]);
+      if (linkedin) items.push([linkedin.url, "ti-brand-linkedin", "LinkedIn"]);
+      social.forEach(el => {
+        el.innerHTML = items.map(([href, icon, label]) =>
+          '<a href="' + esc(href) + '" ' + (href.startsWith("http") ? 'target="_blank" rel="noopener" ' : "") +
+          'aria-label="' + esc(label) + '"><i class="ti ' + icon + '" aria-hidden="true"></i></a>'
+        ).join("");
+      });
+    }
   }
 
   /* ---------- Project cards + expandable detail ---------- */
