@@ -169,9 +169,11 @@ const TIMELINE = [
 --------------------------------------------------------------- */
 
 const ABOUT = [
-  "Replace this with your story. Two or three short paragraphs work well: where you're from, what drew you to your field, and what kind of problems you love working on.",
-  "A second paragraph can cover what you're doing now — your role, your team, or what you're studying — and what you're hoping to do next.",
-  "End with something human: what you do outside work, a hobby, or what someone should reach out to you about.",
+  "Hi, I'm Dhruv. I'm an undergraduate student at Worcester Polytechnic Institute (WPI) studying \
+  Robotics Engineering with a minor in Computer Science. I have a strong interest in robotics, automation,\
+   and software development. Currently based in the Greater Boston Area.",
+  "I have experience working in various roles in robotics or robotics adjacent sectors and am currently \
+  working as a Systems Integration Intern at Johnson & Johnson MedTech.",
 ];
 
 /* ------------------------- SKILLS ---------------------------
