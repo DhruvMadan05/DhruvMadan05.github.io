@@ -17,10 +17,11 @@
 const SITE = {
   name: "Dhruv Madan",                       // your name (appears in nav + footer)
   role: "Robotics Engineer",                 // short label under your name
-  location: "Boston, MA",
+  location: "Greater Boston, MA",
   tagline: "Hi, I'm Dhruv. I build cool things with robotics and software.",
   intro: "I'm a Robotics engineer who wants to make the world a better place through thoughtful technology.",
   email: "Dmadan@wpi.edu",
+  phone: "774-203-6946",                     // optional: e.g. "+1 555 123 4567" — leave blank to hide the icon
   resumeFile: "images/Dhruv_Madan_Resume.pdf",                  // put your PDF in the site folder with this name
   photo: "images/square_headshot.jpg",                                 // optional: path to your headshot, e.g. "images/me.jpg"
   showResumeDetails: false,                  // set true to show work/education/skills above the PDF
@@ -146,6 +147,7 @@ const TIMELINE = [
     org: "Worcester Polytechnic Institute (WPI)",
     start: 2027,
     end: 2027,
+    endMonth: "December",
     description: "Focus on robotics and automation.",
   },
   {
