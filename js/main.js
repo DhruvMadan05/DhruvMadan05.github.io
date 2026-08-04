@@ -14,17 +14,18 @@
 
   /* ---------- Shared header / footer ---------- */
   const PAGES = [
-    ["index.html", "Home"],
-    ["about.html", "About"],
-    ["resume.html", "Resume"],
-    ["timeline.html", "Timeline"],
-    ["projects.html", "Projects"],
-    ["photography.html", "Photography"],
+    ["/", "Home"],
+    ["/about/", "About"],
+    ["/resume/", "Resume"],
+    ["/timeline/", "Timeline"],
+    ["/projects/", "Projects"],
+    ["/photography/", "Photography"],
   ];
 
   function currentPage() {
-    const file = location.pathname.split("/").pop() || "index.html";
-    return file;
+    let path = location.pathname.replace(/index\.html$/, "");
+    if (!path.endsWith("/")) path += "/";
+    return path;
   }
 
   function renderChrome() {
@@ -33,7 +34,7 @@
       const cur = currentPage();
       header.innerHTML =
         '<div class="wrap nav">' +
-        '<a class="nav-name" href="index.html">' + esc(SITE.name) + "</a>" +
+        '<a class="nav-name" href="/">' + esc(SITE.name) + "</a>" +
         '<nav class="nav-links" aria-label="Main">' +
         PAGES.map(([href, label]) =>
           '<a href="' + href + '"' + (href === cur ? ' aria-current="page"' : "") + ">" + label + "</a>"
@@ -113,7 +114,7 @@
         : "") +
       ((p.images && p.images.length)
         ? '<div class="dialog-gallery">' + p.images.map(src =>
-            '<img src="images/' + esc(src) + '" alt="' + esc(p.title) + ' screenshot" loading="lazy">'
+            '<img src="/images/' + esc(src) + '" alt="' + esc(p.title) + ' screenshot" loading="lazy">'
           ).join("") + "</div>"
         : "") +
       ((p.links && p.links.length)
