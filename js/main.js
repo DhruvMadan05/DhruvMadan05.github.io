@@ -70,10 +70,11 @@
     const social = document.querySelectorAll("[data-site-social]");
     if (social.length) {
       const linkedin = SITE.links.find(l => /linkedin/i.test(l.label));
+      const instagram = SITE.links.find(l => /instagram/i.test(l.label));
       const items = [];
       if (SITE.email) items.push(['mailto:' + SITE.email, "ti-mail", "Email"]);
-      if (SITE.phone) items.push(['tel:' + SITE.phone.replace(/[^\d+]/g, ""), "ti-phone", "Phone"]);
       if (linkedin) items.push([linkedin.url, "ti-brand-linkedin", "LinkedIn"]);
+      if (instagram) items.push([instagram.url, "ti-brand-instagram", "Instagram"]);
       social.forEach(el => {
         el.innerHTML = items.map(([href, icon, label]) =>
           '<a href="' + esc(href) + '" ' + (href.startsWith("http") ? 'target="_blank" rel="noopener" ' : "") +
